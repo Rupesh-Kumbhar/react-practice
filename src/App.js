@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import BgChanger from './components/bgChanger';
+import Counter from './components/counter';
+import UpdateProps from './components/UpdateProps';
+import React, { useState } from 'react';
 
 function App() {
+  /*
+  Because Counter.jsx and UpdateProps.jsx are separate sibling components, 
+  Counter cannot directly pass data to UpdateProps. 
+  
+  Store experienceYears in their common parent, App.js, 
+  then pass it through props.
+
+  */
+
+  const [experienceYears, setExperienceYears] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div>
+      {/* <Counter />
+      <UpdateProps 
+      expYearProp={experienceYears} 
+      incExperienceYearsProp={setExperienceYears} /> */}
+      <BgChanger />
     </div>
   );
 }

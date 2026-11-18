@@ -1,0 +1,5 @@
+{
+    "github.copilot.completions.chat.enabled": false,
+    "editor.inlineSuggest.edits.allowCodeShifting": "never",
+    "editor.inlineSuggest.edits.renderSideBySide": "never"
+}
